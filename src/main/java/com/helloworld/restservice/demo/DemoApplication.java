@@ -7,10 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
+
+@SpringBootApplication
+//Combines:
 //@Configuration
 //@EnableAutoConfiguration
 //@ComponentScan
-@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {

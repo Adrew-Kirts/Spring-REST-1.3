@@ -5,7 +5,7 @@ import lombok.Data;
 
 // Annotation
 @Data
-public class DomainBean {
+public class Customer {
 
     String id;
     String first_name;

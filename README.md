@@ -4,9 +4,10 @@
 
 ### RESTful services
 
-Annotation
+Annotations
 
 Description
+
 @RestController	Combines @Controller and @ResponseBody
 
 @RequestMapping	Maps web requests with ‘path’ attribute and response format with ‘produces’ attribute
