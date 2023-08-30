@@ -92,5 +92,10 @@ public static ArrayList<Customer> arr = new ArrayList<>();
         return null;
     }
 
+    @PostMapping(value = "/add")
+    public void addCustomer(@RequestBody Customer customer){
+        arr.add(customer);
+    }
+
 
 }
