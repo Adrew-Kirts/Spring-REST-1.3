@@ -1,4 +1,4 @@
-package com.helloworld.restservice.demo;
+package fr.campusnumerique.restservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

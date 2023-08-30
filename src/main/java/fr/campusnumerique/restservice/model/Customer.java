@@ -1,4 +1,4 @@
-package com.helloworld.restservice.demo;
+package fr.campusnumerique.restservice.model;
 
 // Importing class
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class Customer {
 
-    String id;
+    int id;
     String first_name;
     String last_name;
     String birthdate;

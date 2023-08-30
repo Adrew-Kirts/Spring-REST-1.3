@@ -1,4 +1,4 @@
-package com.helloworld.restservice.demo;
+package fr.campusnumerique.restservice;
 
 // Importing classes
 import org.springframework.boot.SpringApplication;
@@ -8,13 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 
 // Main class
-public class GfgJsonRestResponseApplication {
+public class ResponseApplication {
 
     // Main driver method
     public static void main(String[] args)
     {
 
         SpringApplication.run(
-                GfgJsonRestResponseApplication.class, args);
+                ResponseApplication.class, args);
     }
 }
