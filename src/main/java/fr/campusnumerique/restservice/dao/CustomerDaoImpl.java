@@ -1,5 +1,6 @@
 package fr.campusnumerique.restservice.dao;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import fr.campusnumerique.restservice.model.Customer;
@@ -25,7 +26,7 @@ import org.springframework.stereotype.Repository;
         userTwo.setId(2);
         userTwo.setFirst_name("Marie");
         userTwo.setLast_name("Teneve");
-        userTwo.setBirthdate("1989-08-12");
+        userTwo.setBirthdate("1989-02-12");
         userTwo.setLicense_number("CSG5C3DKJ");
 
         arr.add(userOne);
