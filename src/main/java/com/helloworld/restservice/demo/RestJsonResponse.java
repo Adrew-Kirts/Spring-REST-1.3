@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class RestJsonResponse {
 
 
+
     @GetMapping
     public ArrayList<DomainBean> get() {
 
@@ -28,6 +29,7 @@ public class RestJsonResponse {
         userTwo.setLast_name("Teneve");
         userTwo.setBirthdate("1989-08-12");
         userTwo.setLicense_number("CSG5C3DKJ");
+
 
         arr.add(userOne);
         arr.add(userTwo);
@@ -58,11 +60,13 @@ public class RestJsonResponse {
         arr.add(userOne);
         arr.add(userTwo);
 
-        for (DomainBean user : arr) {
-            if (user.getId().equals(id)) {
-                return user;
+        for (DomainBean users : arr) {
+            if (users.getId().equals(id)) {
+                return users;
             }
         }
         return null;
     }
+
+
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 
 // Annotation
 @Data
-// Class
 public class DomainBean {
 
     String id;
