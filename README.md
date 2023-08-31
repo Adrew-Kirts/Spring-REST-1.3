@@ -2,25 +2,85 @@
 
 ## Syntax glossary
 
+### Microservice architecture (MSA)
+
+- Designing software as small, independent services.
+- Each service handles a specific task or functionality.
+- Services can be developed, deployed, and updated independently.
+- Communication between services often happens through well-defined APIs.
+- Provides adaptability, speed, and resource efficiency.
+
+#### Benefits:
+    - Improved scalability based on individual service needs.
+    - Agility in development and quicker time-to-market.
+    - Fault isolation for better system resilience.
+    - Flexibility to use different technologies for each service.
+
+#### Challenges:
+    - Managing inter-service communication complexity.
+    - Ensuring consistent data across services.
+    - Monitoring and maintaining multiple services.
+
+#### Applications:
+    - Web applications
+    - E-commerce platforms
+    - Large-scale enterprise systems
+
+#### Example of an online e-commerce platform: 
+
+Components:
+
+    User Service: Handles user registration, login, and profile management.
+    Product Service: Manages product information, such as details, prices, and availability.
+    Order Service: Deals with placing orders, order history, and order processing.
+    Payment Service: Responsible for processing payments and managing payment methods.
+    Review Service: Allows users to submit and view product reviews and ratings.
+
+How They Interact:
+
+    When a user wants to buy a product, they log in via the User Service.
+    They search for a product, which requests data from the Product Service.
+    When they select a product, the Order Service is informed to create an order.
+    The Payment Service handles payment processing once the order is confirmed.
+    Users can leave reviews, which are managed by the Review Service.
+
+In this architecture, each service focuses on a specific task and can be developed, deployed, and maintained independently. They communicate through APIs, and if one service fails, it doesn't necessarily affect the others. This modularity allows for easier scaling, quicker updates, and flexibility in choosing technologies for each service.
+
 ### RESTful services
 
-Annotations
+RESTful services, or Representational State Transfer, are a type of software architecture that uses a set of constraints to create web services. These services are designed to be simple, scalable, and easily accessible via standard HTTP methods. They enable communication between different software applications over the internet, often used for building APIs that allow systems to interact with each other.
 
-Description
+### Used Annotations
 
-@RestController	Combines @Controller and @ResponseBody
+#### Main class
 
-@RequestMapping	Maps web requests with ‘path’ attribute and response format with ‘produces’ attribute
+    @SpringBootApplication: Marks the main class of a Spring Boot application and enables various configurations and auto-configuration.
 
-@CrossOrigin	Permits cross-origin web requests on the specific handler classes/methods
+#### Configuration
 
-@GetMapping	Maps GET request on specific handler method
+    @EnableSwagger2: Enables Swagger API documentation generation for the application.
+    @Bean: Indicates that a method produces a bean to be managed by the Spring container.
+    @Configuration: Indicates that a class provides Spring Bean configuration.
 
-@PathVariable	Binds the URI template variables to method parameters
+#### CDAO
+
+    @Repository: Marks a class as a Data Access Object (DAO), allowing Spring to handle database interactions.
+
+#### CModel
+
+    @Data (Lombok project): Lombok annotation to generate boilerplate code for getters, setters, toString, etc. in a class.
+
+#### CController
+
+    @RestController: Indicates that a class is a controller, capable of handling incoming HTTP requests and returning response objects.
+    @RequestMapping: Maps HTTP requests to controller methods or classes.
+    @GetMapping: Maps HTTP GET requests to specific controller methods.
+    @PostMapping: Maps HTTP POST requests to specific controller methods.
+    @DeleteMapping: Maps HTTP DELETE requests to specific controller methods.
+    @PutMapping: Maps HTTP PUT requests to specific controller methods.
 
 
-
-### Getters and setters
+### Getters and setters with Lombok
 
     Java Beans requires the Getter/Setter methods.
     One can generate them automatically with the ‘@Data’ annotation of the ‘Lombok’ library.
@@ -52,7 +112,6 @@ What it does:
     fields with no initializer that have been marked with @NonNull, in order to ensure that the field is 
     never null.
 
-### Microservice architecture (MSA)
 
 ### DAO
 
