@@ -12,6 +12,7 @@ public class CustomerController {
 
 private final CustomerDAO customerDAO;
 
+
     public CustomerController(CustomerDAO customerDAO) {
         this.customerDAO = customerDAO;
     }
@@ -23,12 +24,12 @@ private final CustomerDAO customerDAO;
 
     @GetMapping("{id}")
     public Customer findById(@PathVariable("id") int id) {
-
         return customerDAO.findById(id);
     }
 
     @PostMapping(value = "/add")
     public void save(@RequestBody Customer customer) {
+        Validator.validator(customer.getLicense_number());
         customerDAO.save(customer);
     }
 
