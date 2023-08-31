@@ -14,21 +14,22 @@ import org.springframework.stereotype.Repository;
     static {
         Customer userOne = new Customer();
         userOne.setId(1);
-        userOne.setFirst_name("Alice");
-        userOne.setLast_name("Dupont");
+        userOne.setFirstName("Alice");
+        userOne.setLastName("Dupont");
         userOne.setBirthdate("1985-03-15");
-        userOne.setLicense_number("A1B2C3D4E");
-
+        userOne.setLicenseNumber("A1B2C3D4E");
 
         Customer userTwo = new Customer();
         userTwo.setId(2);
-        userTwo.setFirst_name("Marie");
-        userTwo.setLast_name("Teneve");
+        userTwo.setFirstName("Marie");
+        userTwo.setLastName("Teneve");
         userTwo.setBirthdate("1989-02-12");
-        userTwo.setLicense_number("CSG5C3DKJ");
+        userTwo.setLicenseNumber("CSG5C3DKJ");
 
         arr.add(userOne);
         arr.add(userTwo);
+
+
     }
 
 //    @GetMapping
