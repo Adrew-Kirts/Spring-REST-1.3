@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/JSON")
-
 public class CustomerController {
 
 private final CustomerDAO customerDAO;

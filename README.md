@@ -62,23 +62,25 @@ RESTful services, or Representational State Transfer, are a type of software arc
     @Bean: Indicates that a method produces a bean to be managed by the Spring container.
     @Configuration: Indicates that a class provides Spring Bean configuration.
 
-#### CDAO
+#### DAO
 
     @Repository: Marks a class as a Data Access Object (DAO), allowing Spring to handle database interactions.
 
-#### CModel
+#### Model
 
     @Data (Lombok project): Lombok annotation to generate boilerplate code for getters, setters, toString, etc. in a class.
 
-#### CController
+#### Controller
 
     @RestController: Indicates that a class is a controller, capable of handling incoming HTTP requests and returning response objects.
-    @RequestMapping: Maps HTTP requests to controller methods or classes.
+    @RequestMapping: Maps (any) HTTP requests (POST, PUT, GET, DELETE, ...) to controller methods or classes.
     @GetMapping: Maps HTTP GET requests to specific controller methods.
     @PostMapping: Maps HTTP POST requests to specific controller methods.
     @DeleteMapping: Maps HTTP DELETE requests to specific controller methods.
     @PutMapping: Maps HTTP PUT requests to specific controller methods.
 
+    @PathVariable: Used to extract data from the URL path. It allows you to define placeholders in your request mapping URL and bind those placeholders to method parameters.
+    @RequestBody: Maps the HttpRequest body to a transfer or domain object, enabling automatic deserialization of the inbound HttpRequest body onto a Java object
 
 ### Getters and setters with Lombok
 
@@ -111,7 +113,6 @@ What it does:
     It generates a constructor that initializes all the final fields, as well as all the non-final 	
     fields with no initializer that have been marked with @NonNull, in order to ensure that the field is 
     never null.
-
 
 ### DAO
 
