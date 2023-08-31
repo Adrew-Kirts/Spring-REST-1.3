@@ -3,9 +3,6 @@ package fr.campusnumerique.restservice.model;
 // Importing class
 import lombok.Data;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 // Annotation
 @Data
 public class Customer {

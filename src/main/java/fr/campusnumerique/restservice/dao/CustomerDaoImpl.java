@@ -1,15 +1,13 @@
 package fr.campusnumerique.restservice.dao;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import fr.campusnumerique.restservice.model.Customer;
 import org.springframework.stereotype.Repository;
 
 
     @Repository
     public class CustomerDaoImpl implements CustomerDAO {
-
 
     public static ArrayList<Customer> arr = new ArrayList<>();
 
@@ -60,7 +58,7 @@ import org.springframework.stereotype.Repository;
         public void delete(int id) {
             for (Customer user : arr) {
                 if (user.getId() == id) {
-                    arr.remove(id-1);
+                    arr.remove(findById(id));
                 }
             }
         }
