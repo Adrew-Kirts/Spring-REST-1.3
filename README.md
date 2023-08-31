@@ -158,6 +158,49 @@ Add to application.properties:
 
     spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 
+### JPA annotations 
+
+#### Spring JPA Entity
+
+    Applying the @Entity annotation to a class with JPA declares that the class definition will correspond to a database table with a similar name.
+
+#### Spring JPA @Id
+
+    The @Id annotation can be applied to a member of a class to designate that this member will uniquely identify the entity in the database.
+
+#### Spring JPA Repository
+
+    With Spring Data JPA, the developer creates a data repository by writing a repository interface and adding custom finder methods. Spring provides the implementation automatically.
+
+#### Spring JPA Save Method
+
+    The save method of the CrudRepository can be used to create or update an entity in the database. It returns the newly-saved / updated entity.
+
+#### Spring JPA FindAll Method
+
+    The findAll method of the CrudRepository returns an iterable collection of entities from the database.
+
+#### Spring JPA Delete Method
+
+    The delete method of the CrudRepository removes a given entity.
+
+#### Spring JPA FindByID Method
+
+    The findById method of the CrudRepository retrieves an entity by its ID.
+
+### HTTP Methods (Verbs)
+
+There are 5 basic request patterns which apply to most endpoints, and these are based on the HTTP verbs. The basic request patterns are:
+
+    Retrieve a single item (GET)
+
+    Retrieve a list of items (GET)
+
+    Create an item (POST)
+
+    Update an item (PUT)
+
+    Delete an item (DELETE)
 
 
 
