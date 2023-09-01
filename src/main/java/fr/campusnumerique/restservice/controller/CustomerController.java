@@ -8,32 +8,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/JSON")
+@RequestMapping("/customers")
 public class CustomerController {
 
     @Autowired
     private UserRepository userRepository;
 
 
-    @GetMapping(path="/all")
+    @GetMapping
     public Iterable<Customer> getAllUsers() {
         return userRepository.findAll();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Optional<Customer> findById(@PathVariable("id") int id) {
         return userRepository.findById(id);
     }
 
-    @PostMapping(value = "/add")
+    @PostMapping
     public Optional<Customer> save(@RequestBody Customer customer) {
-        Validator.validator(customer.getLicenseNumber());
+        Validator.validator(customer.getLicenseId());
         userRepository.save(customer);
 //        return "New customer created successfully: \n" + Optional.of(customer);
         return Optional.of(customer);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public void deleteUserById(@PathVariable("id") int id) {
     userRepository.deleteById(id);
     }
