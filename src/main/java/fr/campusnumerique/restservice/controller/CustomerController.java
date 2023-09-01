@@ -17,7 +17,6 @@ public class CustomerController {
 
     @GetMapping(path="/all")
     public Iterable<Customer> getAllUsers() {
-        // This returns a JSON or XML with the users
         return userRepository.findAll();
     }
 
@@ -27,9 +26,11 @@ public class CustomerController {
     }
 
     @PostMapping(value = "/add")
-    public void save(@RequestBody Customer customer) {
+    public Optional<Customer> save(@RequestBody Customer customer) {
         Validator.validator(customer.getLicenseNumber());
         userRepository.save(customer);
+//        return "New customer created successfully: \n" + Optional.of(customer);
+        return Optional.of(customer);
     }
 
     @DeleteMapping("{id}")
@@ -38,7 +39,8 @@ public class CustomerController {
     }
 
     @PutMapping
-    public void edit (@RequestBody Customer customerUpdate){
+    public Customer edit (@RequestBody Customer customerUpdate){
         userRepository.save(customerUpdate);
+        return customerUpdate;
     }
 }

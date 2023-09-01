@@ -160,7 +160,7 @@ Add to application.properties:
 
 ### JPA annotations 
 
-#### Spring JPA Entity
+#### Spring JPA (Java Persistance API) Entity
 
     Applying the @Entity annotation to a class with JPA declares that the class definition will correspond to a database table with a similar name.
 
